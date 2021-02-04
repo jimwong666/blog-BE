@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "module": "commonjs", //指定生成哪个模块系统代码
+    "declaration": true,
+    // "noImplicitAny": true, //不允许any类型 
+    "removeComments": true, //编译成JS时,去除注释
+    "emitDecoratorMetadata": true, //给源码里的装饰器声明加上设计类型元数据
+    "experimentalDecorators": true, //启用实验性的ES装饰器
+    "allowSyntheticDefaultImports": true, //允许从没有设置默认导出的模块中默认导入。这并不影响代码的显示，仅为了类型检查。
+    "target": "es2017", //输出文件的格式
+    "sourceMap": true, //用于debug ,生成相应的.map文件
+    "outDir": "./dist", //输出JS文件目录
+    "baseUrl": "./", //解析非相对模块名的基准目录
+    "incremental": true
+  }
+}
