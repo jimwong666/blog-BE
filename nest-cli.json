@@ -1,0 +1,45 @@
+{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "src",
+  "projects": {
+    "db": {
+      "type": "library",
+      "root": "libs/db",
+      "entryFile": "index",
+      "sourceRoot": "libs/db/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/db/tsconfig.lib.json"
+      }
+    },
+    "httpRequest": {
+      "type": "library",
+      "root": "libs/httpRequest",
+      "entryFile": "index",
+      "sourceRoot": "libs/httpRequest/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/httpRequest/tsconfig.lib.json"
+      }
+    },
+    "guard": {
+      "type": "library",
+      "root": "libs/guard",
+      "entryFile": "index",
+      "sourceRoot": "libs/guard/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/guard/tsconfig.lib.json"
+      }
+    },
+    "exception": {
+      "type": "library",
+      "root": "libs/exception",
+      "entryFile": "index",
+      "sourceRoot": "libs/exception/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/exception/tsconfig.lib.json"
+      }
+    }
+  },
+  "compilerOptions": {
+    "webpack": true
+  }
+}
