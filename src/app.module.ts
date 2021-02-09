@@ -1,17 +1,7 @@
 import { Module } from '@nestjs/common';
-import { UserModule } from './user/user.module';
-import { AuthModule } from './auth/auth.module';
-import { HomeModule } from './home/home.module';
-import { ExceptionModule } from '@libs/exception';
-import { GuardModule } from '@libs/guard';
+import { LoginModule } from './server/login/login.module';
 
 @Module({
-	imports: [
-		HomeModule, 
-		AuthModule, 
-		UserModule, 
-		GuardModule, 
-		ExceptionModule
-	],
+  imports: [LoginModule]
 })
 export class AppModule {}

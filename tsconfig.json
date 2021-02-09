@@ -10,32 +10,6 @@
     "sourceMap": true,
     "outDir": "./dist",
     "baseUrl": "./",
-    "incremental": true,
-    "paths": {
-      "@libs/db": [
-        "libs/db/src"
-      ],
-      "@libs/db/*": [
-        "libs/db/src/*"
-      ],
-      "@libs/httpRequest": [
-        "libs/httpRequest/src"
-      ],
-      "@libs/httpRequest/*": [
-        "libs/httpRequest/src/*"
-      ],
-      "@libs/guard": [
-        "libs/guard/src"
-      ],
-      "@libs/guard/*": [
-        "libs/guard/src/*"
-      ],
-      "@libs/exception": [
-        "libs/exception/src"
-      ],
-      "@libs/exception/*": [
-        "libs/exception/src/*"
-      ]
-    }
+    "incremental": true
   }
 }

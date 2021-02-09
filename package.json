@@ -1,5 +1,5 @@
 {
-  "name": "nest",
+  "name": "demo",
   "version": "0.0.1",
   "description": "",
   "author": "",
@@ -8,7 +8,7 @@
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",
-    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\" \"libs/**/*.ts\"",
+    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
@@ -24,7 +24,7 @@
     "@nestjs/common": "^7.5.1",
     "@nestjs/core": "^7.5.1",
     "@nestjs/platform-express": "^7.5.1",
-    "ejs": "^3.1.5",
+    "ejs": "^3.1.6",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
     "rxjs": "^6.6.3"
@@ -57,7 +57,7 @@
       "json",
       "ts"
     ],
-    "rootDir": ".",
+    "rootDir": "src",
     "testRegex": ".*\\.spec\\.ts$",
     "transform": {
       "^.+\\.(t|j)s$": "ts-jest"
@@ -65,21 +65,7 @@
     "collectCoverageFrom": [
       "**/*.(t|j)s"
     ],
-    "coverageDirectory": "./coverage",
-    "testEnvironment": "node",
-    "roots": [
-      "<rootDir>/src/",
-      "<rootDir>/libs/"
-    ],
-    "moduleNameMapper": {
-      "@libs/db/(.*)": "<rootDir>/libs/db/src/$1",
-      "@libs/db": "<rootDir>/libs/db/src",
-      "@libs/httpRequest/(.*)": "<rootDir>/libs/httpRequest/src/$1",
-      "@libs/httpRequest": "<rootDir>/libs/httpRequest/src",
-      "@libs/guard/(.*)": "<rootDir>/libs/guard/src/$1",
-      "@libs/guard": "<rootDir>/libs/guard/src",
-      "@libs/exception/(.*)": "<rootDir>/libs/exception/src/$1",
-      "@libs/exception": "<rootDir>/libs/exception/src"
-    }
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "node"
   }
 }

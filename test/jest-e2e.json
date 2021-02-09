@@ -1,23 +1,9 @@
 {
-  "moduleFileExtensions": [
-    "js",
-    "json",
-    "ts"
-  ],
+  "moduleFileExtensions": ["js", "json", "ts"],
   "rootDir": ".",
   "testEnvironment": "node",
   "testRegex": ".e2e-spec.ts$",
   "transform": {
     "^.+\\.(t|j)s$": "ts-jest"
-  },
-  "moduleNameMapper": {
-    "@libs/db/(.*)": "<rootDir>/../libs/db/src/$1",
-    "@libs/db": "<rootDir>/../libs/db/src",
-    "@libs/httpRequest/(.*)": "<rootDir>/../libs/httpRequest/src/$1",
-    "@libs/httpRequest": "<rootDir>/../libs/httpRequest/src",
-    "@libs/guard/(.*)": "<rootDir>/../libs/guard/src/$1",
-    "@libs/guard": "<rootDir>/../libs/guard/src",
-    "@libs/exception/(.*)": "<rootDir>/../libs/exception/src/$1",
-    "@libs/exception": "<rootDir>/../libs/exception/src"
   }
 }
