@@ -112,6 +112,6 @@
     "port": 3003,
     "devApiPath": "https://focusapi.vemic.com/mock/54",
     "assetsPath": "/dist/",
-    "distApiPath": "https://focusapi.vemic.com/mock/54"
+    "distApiPath": "http://localhost:3006"
   }
 }

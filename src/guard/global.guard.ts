@@ -8,7 +8,8 @@ export class GlobalGuard implements CanActivate {
 	context: ExecutionContext,
 	): boolean | Promise<boolean> | Observable<boolean> {
 		const request = context.switchToHttp().getRequest();
-		const token = context.switchToRpc().getData().headers.cookie.token;
+		// const token = context.switchToRpc().getData().headers.cookie.token;
+		const token = "111";
 		if (this.hasUrl(this.urlList, request.url)) {
 			return true;
 		}
