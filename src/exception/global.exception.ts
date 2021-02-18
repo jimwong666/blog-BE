@@ -1,4 +1,4 @@
-import { ExceptionFilter, Catch, ArgumentsHost, HttpException,Logger,HttpStatus } from '@nestjs/common';
+import { ExceptionFilter, Catch, ArgumentsHost, HttpException, Logger, HttpStatus } from '@nestjs/common';
 import { Request, Response } from 'express';
 import { resolve } from 'path';
 
@@ -18,7 +18,7 @@ export class GlobalException implements ExceptionFilter {
 			HttpStatus.INTERNAL_SERVER_ERROR; // 500
 		// 404 直接就扔给前端 >_<
 		if(<number>status === 404) {
-			return response.sendFile(resolve(__dirname, '../../client/index.html'));
+			return response.sendFile(resolve(__dirname, '../../dist/index.html'));
 		}
 		// 抛出错误信息
 		const message = exception.message || null;
