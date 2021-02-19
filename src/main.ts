@@ -3,13 +3,15 @@ import { NestExpressApplication } from '@nestjs/platform-express'; // 注入平�
 import { GlobalException } from './exception/global.exception';
 import { GlobalGuard } from './guard/global.guard';
 import { AppModule } from './app.module';
-import { resolve } from 'path';
+import { resolve, join } from 'path';
+import * as serveStatic from 'serve-static';
 
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
 
-  app.useStaticAssets(resolve(__dirname, '../public'), { prefix: '/public/' });
-  app.useStaticAssets(resolve(__dirname, '../dist'), { prefix: '/dist/' });
+  app.use('/public', serveStatic(join(__dirname, '../public')));
+  app.use('/', serveStatic(join(__dirname, '../dist')));
+  // app.useStaticAssets(resolve(__dirname, '../dist'), { prefix: '/dist/' });
   app.setBaseViewsDir(resolve(__dirname, '../views'));
   app.setViewEngine('ejs');
 

@@ -16,6 +16,7 @@ export class GlobalException implements ExceptionFilter {
 		const status = exception instanceof HttpException ? 
 			exception.getStatus() : 
 			HttpStatus.INTERNAL_SERVER_ERROR; // 500
+		
 		// 404 直接就扔给前端 >_<
 		if(<number>status === 404) {
 			return response.sendFile(resolve(__dirname, '../../dist/index.html'));
