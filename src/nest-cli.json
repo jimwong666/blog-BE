@@ -1,0 +1,16 @@
+{
+  "projects": {
+    "my-http": {
+      "type": "library",
+      "root": "libs/my-http",
+      "entryFile": "index",
+      "sourceRoot": "libs/my-http/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/my-http/tsconfig.lib.json"
+      }
+    }
+  },
+  "compilerOptions": {
+    "webpack": true
+  }
+}

@@ -19,7 +19,7 @@ export class GlobalException implements ExceptionFilter {
 		
 		// 404 直接就扔给前端 >_<
 		if(<number>status === 404) {
-			return response.sendFile(resolve(__dirname, '../../dist/index.html'));
+			return response.sendFile(resolve(__dirname, '../../client_dist/index.html'));
 		}
 		// 抛出错误信息
 		const message = exception.message || null;

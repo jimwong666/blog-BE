@@ -10,6 +10,20 @@
     "sourceMap": true,
     "outDir": "./dist",
     "baseUrl": "./",
-    "incremental": true
+    "incremental": true,
+    "paths": {
+      "@libs": [
+        "src/libs"
+      ],
+      "@libs/*": [
+        "src/libs/*"
+      ],
+      "@globals": [
+        "src/globals"
+      ],
+      "@globals/*": [
+        "src/globals/*"
+      ],
+    }
   }
 }
