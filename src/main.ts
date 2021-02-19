@@ -10,7 +10,7 @@ async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
 
   app.use('/public', serveStatic(join(__dirname, '../public')));
-  app.use('/', serveStatic(join(__dirname, '../dist')));
+  app.use('/', serveStatic(join(__dirname, '../client_dist')));
   // app.useStaticAssets(resolve(__dirname, '../dist'), { prefix: '/dist/' });
   app.setBaseViewsDir(resolve(__dirname, '../views'));
   app.setViewEngine('ejs');
