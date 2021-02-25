@@ -1,8 +1,8 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Header } from '@nestjs/common';
 import { ApiService } from './api.service';
 import { Observable } from 'rxjs';
 import { AxiosResponse } from 'axios';
-import { ImgList } from './api.imgList.interface';
+import { ImgList } from './interface/imgList.interface';
 
 @Controller('demo1')
 export class ApiController {

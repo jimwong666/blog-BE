@@ -5,8 +5,14 @@
 	"version": "0.2.0",
 	"configurations": [
 		{
+			"command": "npm run fe:dev",
+			"name": "fe:dev",
+			"request": "launch",
+			"type": "node-terminal"
+		},
+		{
 			"command": "npm run start:debug",
-			"name": "debug",
+			"name": "server:debug",
 			"request": "launch",
 			"type": "node-terminal"
 		}

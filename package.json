@@ -26,12 +26,12 @@
     "@nestjs/common": "^7.5.1",
     "@nestjs/core": "^7.5.1",
     "@nestjs/platform-express": "^7.5.1",
-    "ejs": "^3.1.6",
-    "reflect-metadata": "^0.1.13",
-    "rimraf": "^3.0.2",
-    "rxjs": "^6.6.3",
     "axios": "^0.20.0",
+    "class-transformer": "^0.4.0",
+    "class-validator": "^0.13.1",
     "classnames": "^2.2.6",
+    "connect-history-api-fallback": "^1.6.0",
+    "ejs": "^3.1.6",
     "immutable": "^4.0.0-rc.12",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -40,7 +40,11 @@
     "react-router-dom": "^5.2.0",
     "redux": "^4.0.5",
     "redux-immutable": "^4.0.0",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "reflect-metadata": "^0.1.13",
+    "rimraf": "^3.0.2",
+    "rxjs": "^6.6.3",
+    "serve-favicon": "^2.5.0"
   },
   "devDependencies": {
     "@nestjs/cli": "^7.5.1",
@@ -110,8 +114,8 @@
   },
   "webpackConfig": {
     "port": 3003,
-    "devApiPath": "https://focusapi.vemic.com/mock/54",
-    "assetsPath": "/",
+    "devApiPath": "http://localhost:3006",
+    "assetsPath": "/client_dist/",
     "distApiPath": "http://localhost:3006"
   }
 }

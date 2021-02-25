@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" href="dist/favicon.ico">
+    <link rel="icon" href="/favicon.ico">
     <title>登录</title>
 </head>
 <body>
-    <div>
+    <form method="POST" action="/login">
         <div>
             <label for="userName">用户名：</label>
             <input type="text" name="userName">
@@ -17,6 +17,7 @@
             <label for="password">密码：</label>
             <input type="password" name="password">
         </div>
-    </div>
+        <button type="submit">登录</button>
+    </form>
 </body>
 </html>

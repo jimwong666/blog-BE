@@ -12,6 +12,30 @@
     "baseUrl": "./",
     "incremental": true,
     "paths": {
+      "@exception": [
+        "src/exception"
+      ],
+      "@exception/*": [
+        "src/exception/*"
+      ],
+      "@guard": [
+        "src/guard"
+      ],
+      "@guard/*": [
+        "src/guard/*"
+      ],
+      "@interceptor": [
+        "src/interceptor"
+      ],
+      "@interceptor/*": [
+        "src/interceptor/*"
+      ],
+      "@pipe": [
+        "src/pipe"
+      ],
+      "@pipe/*": [
+        "src/pipe/*"
+      ],
       "@libs": [
         "src/libs"
       ],
