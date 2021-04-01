@@ -13,6 +13,10 @@ const routes = [
     {
         path: '/demo2',
         component: asyncLoad(() => import('@pages/demo2'))
+    },
+    {
+        path: '*',
+        component: asyncLoad(() => import('@pages/404'))
     }
 ];
 

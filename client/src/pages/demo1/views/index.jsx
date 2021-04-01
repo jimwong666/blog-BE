@@ -1,7 +1,8 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from "redux";
-import Nav from '@components/layout/nav'
+import Nav from '@components/layout/nav';
+import Main from '@components/layout/main/index';
 import classNames from "classnames/bind";
 import styles from "../styles/index.scss";
 const cx = classNames.bind(styles);
@@ -28,19 +29,22 @@ export default class Demo1 extends React.Component{
     render(){
         const {preData} = this.props;
         return(
-            <div className={cx("wrap")}>
-                <Nav actived="demo1"/>
-                <ul>
-                {
-                    preData.get('data') && preData.getIn(['data', 'data']).map(item=>{
-                        return <li key={item.get('id')}>
-                            <span>{item.get('name')}</span>
-                            <img src={item.get('imgUrl')} />
-                        </li>
-                    })
-                }
-                </ul>
-            </div>
+            <Main text={
+                <>
+                    <Nav actived="demo1"/>
+                    <ul>
+                        {
+                            preData.get('data') && preData.getIn(['data', 'data']).map(item=>{
+                                console.log(item);
+                                return <li key={item.get('id')}>
+                                    <span>{item.get('name')}</span>
+                                    <img src={item.get('imgUrl')} />
+                                </li>
+                            })
+                        }
+                    </ul>
+                </>
+            } />
         )
     }
 }

@@ -35,6 +35,6 @@ async function bootstrap() {
 	// 全局注册通用异常过滤器HttpExceptionFilter
 	app.useGlobalFilters(new GlobalException());
 
-  await app.listen(3006);
+  await app.listen(3008);
 }
 bootstrap();
