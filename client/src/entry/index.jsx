@@ -14,7 +14,7 @@ const store = applyMiddleware(thunk, simpleAsync)(createStore)(
     rootReducer,
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
-
+console.log(store);
 const render = (App) => {
     ReactDOM.render(
         <Provider store={store}>

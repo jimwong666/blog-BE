@@ -10,6 +10,9 @@ const REQUEST_FAILURE_SUFFIX = 'FAILURE';
  * 如果有request的话说明是异步请求
  * */
 const simpleAsync = ({dispatch}) => next => action => {
+    console.log("开始开始开始开始开始开始开始开始开始开始开始");
+    console.log("next:"+next);
+    console.log("action:"+JSON.stringify(action));
     const {actionTypePrefix, request, callback} = action;
     if (request) {
         dispatch({
@@ -28,7 +31,8 @@ const simpleAsync = ({dispatch}) => next => action => {
             })
         })
     }
-    return next(action);
+    next(action);
+    console.log("结束结束结束结束结束结束结束结束结束结束结束结束结束结束结束");
 };
 
 /**

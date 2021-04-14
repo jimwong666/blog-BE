@@ -8,7 +8,6 @@ import styles from "../styles/index.scss";
 const cx = classNames.bind(styles);
 import {asyncFetchPreData} from '../actions'
 
-
 const mapStateToProps = (state) => ({
     preData: state.getIn(['demo1Reducer', 'preData']),
 });
@@ -35,7 +34,6 @@ export default class Demo1 extends React.Component{
                     <ul>
                         {
                             preData.get('data') && preData.getIn(['data', 'data']).map(item=>{
-                                console.log(item);
                                 return <li key={item.get('id')}>
                                     <span>{item.get('name')}</span>
                                     <img src={item.get('imgUrl')} />
