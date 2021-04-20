@@ -6,7 +6,7 @@ import { GlobalGuard } from './guard/global.guard';
 import { AppModule } from './app.module';
 import { resolve, join } from 'path';
 import * as serveStatic from 'serve-static';
-// import * as serveFavicon from 'serve-favicon';
+import * as serveFavicon from 'serve-favicon';
 // import * as history from 'connect-history-api-fallback';
 
 async function bootstrap() {
@@ -16,7 +16,7 @@ async function bootstrap() {
   app.setViewEngine('ejs');
 
   // favicon
-  // app.use(serveFavicon(join(__dirname, '../public', 'favicon.ico')));
+  app.use(serveFavicon(join(__dirname, '../', 'favicon.ico')));
   
   // app.useStaticAssets(resolve(__dirname, '../public'), { prefix: '/public/' });
   app.use('/public', serveStatic(join(__dirname, '../public')));
