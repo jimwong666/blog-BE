@@ -6,8 +6,8 @@ import { GlobalGuard } from './guard/global.guard';
 import { AppModule } from './app.module';
 import { resolve, join } from 'path';
 import * as serveStatic from 'serve-static';
-import * as serveFavicon from 'serve-favicon';
-import * as history from 'connect-history-api-fallback';
+// import * as serveFavicon from 'serve-favicon';
+// import * as history from 'connect-history-api-fallback';
 
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
@@ -16,16 +16,16 @@ async function bootstrap() {
   app.setViewEngine('ejs');
 
   // favicon
-  app.use(serveFavicon(join(__dirname, '../public', 'favicon.ico')));
+  // app.use(serveFavicon(join(__dirname, '../public', 'favicon.ico')));
   
   // app.useStaticAssets(resolve(__dirname, '../public'), { prefix: '/public/' });
   app.use('/public', serveStatic(join(__dirname, '../public')));
   
   // spa
-  app.use(history({
-    index:'/client_dist/index.html',
-  }));
-  app.use('/client_dist', serveStatic(join(__dirname, '../client_dist')));
+  // app.use(history({
+  //   index:'/client_dist/index.html',
+  // }));
+  // app.use('/client_dist', serveStatic(join(__dirname, '../client_dist')));
  
 
   // 全局注册拦截器

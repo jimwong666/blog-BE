@@ -4,11 +4,11 @@ import { Observable } from 'rxjs';
 import { AxiosResponse } from 'axios';
 import { ImgList } from './interface/imgList.interface';
 
-@Controller('demo1')
+@Controller('api')
 export class ApiController {
 	constructor(private readonly apiService: ApiService){}
 
-	@Get('pre')
+	@Get('imgList')
 	getImgList(): Observable<AxiosResponse<ImgList[]>> {
 		const data = this.apiService.findAll();
 		return data;
