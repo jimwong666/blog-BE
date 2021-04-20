@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: 
+Disallow: /config/
+Disallow: /src/
+Sitemap: http://domain.com/sitemap.xml
