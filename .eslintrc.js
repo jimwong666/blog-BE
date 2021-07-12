@@ -17,7 +17,9 @@ module.exports = {
   },
   ignorePatterns: ['.eslintrc.js'],
   rules: {
-    "indent": [4],
+    "indent": [1, 'tab', {
+      'SwitchCase': 1
+    }],
     "comma-dangle": [1, "never"],
     "no-mixed-spaces-and-tabs": [2, false],
     '@typescript-eslint/interface-name-prefix': 'off',

@@ -3,9 +3,6 @@ import { LoginModule } from './server/login/login.module';
 import { ApiModule } from './server/api/api.module';
 
 @Module({
-  imports: [
-    ApiModule, 
-    LoginModule 
-  ]
+	imports: [ApiModule, LoginModule]
 })
 export class AppModule {}

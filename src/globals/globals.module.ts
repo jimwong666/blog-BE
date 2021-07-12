@@ -5,6 +5,6 @@ import { GlobalsService } from './globals.service';
 @Module({
 	imports: [HttpModule],
 	providers: [GlobalsService],
-	exports: [GlobalsModule],
+	exports: [GlobalsModule]
 })
 export class GlobalsModule {}

@@ -4,10 +4,10 @@ import { loginRet } from './interface/login.interface';
 
 @Injectable()
 export class LoginService {
-
-	validata(body: LoginInfoDTO): loginRet {
+	validate(body: LoginInfoDTO): loginRet {
 		return {
+			...body,
 			retCode: 0
-		}
+		};
 	}
 }

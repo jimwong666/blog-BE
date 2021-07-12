@@ -1,3 +1,3 @@
 export interface loginRet {
-	readonly retCode: number 
+	readonly retCode: number;
 }
